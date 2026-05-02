@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahim Khan · Senior Full Stack Developer</title>
+  <meta name="description" content="Senior Full Stack Developer with 6+ years in fintech and e-commerce. Available for remote opportunities worldwide." />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       ✏️  EDITABLE CONFIGURATION — update these values before deploying
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <script>
+    const CONFIG = {
+      name:        "Pathan Mohammed Ibrahim Khan",
+      shortName:   "Ibrahim Khan",
+      title:       "Senior Full Stack Developer",
+      email:       "pibrahimkhan001@gmail.com",
+      phone:       "+91 90303 84207",
+      location:    "Hyderabad, India · UTC+5:30",
+      available:   "Open to Remote Roles Worldwide",
+      github:      "https://github.com/pibrahimkhan001",
+      linkedin:    "https://www.linkedin.com/in/mahammad-ibrahim-khan-554434319",
+      pioneerSite: "https://pioneer-academy-platform.vercel.app/",
+      resumePDF:   "./Global_Resume.pdf",
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ────────────────────────────────────────────────────────────────
+       THEME TOKENS
+    ──────────────────────────────────────────────────────────────── */
+    :root {
+      --bg:          #EEF3F9;
+      --bg-2:        #E2EBF4;
+      --bg-card:     #FFFFFF;
+      --bg-nav:      rgba(238,243,249,0.94);
+      --border:      rgba(29,111,164,0.12);
+      --border-hi:   rgba(29,111,164,0.30);
+      --shadow:      0 2px 16px rgba(0,60,120,0.08);
+      --shadow-lg:   0 10px 44px rgba(0,60,120,0.12);
+      --navy:        #0F2D52;
+      --blue:        #1D6FA4;
+      --accent:      #1668A0;
+      --accent-hi:   #124F7A;
+      --teal:        #0891B2;
+      --green:       #059669;
+      --text:        #0D1F35;
+      --text-2:      #1A3050;
+      --muted:       #456480;
+      --subtle:      #7A9AB8;
+      --tag-bg:      rgba(22,104,160,0.08);
+      --tag-border:  rgba(22,104,160,0.18);
+      --tag-text:    #15588A;
+      --pill-bg:     rgba(22,104,160,0.06);
+      --pill-border: rgba(22,104,160,0.14);
+      --pill-text:   #1D6090;
+      --stat-bg:     rgba(22,104,160,0.05);
+      --badge-bg:    rgba(5,150,105,0.09);
+      --badge-bdr:   rgba(5,150,105,0.20);
+      --badge-text:  #047857;
+      --toggle-bg:   #C4D5E6;
+      --toggle-knob: #1668A0;
+    }
+
+    [data-theme="dark"] {
+      --bg:          #07111E;
+      --bg-2:        #0C1B2E;
+      --bg-card:     #0E1F33;
+      --bg-nav:      rgba(7,17,30,0.90);
+      --border:      rgba(56,191,255,0.11);
+      --border-hi:   rgba(56,191,255,0.26);
+      --shadow:      0 4px 24px rgba(0,0,0,0.40);
+      --shadow-lg:   0 14px 52px rgba(0,0,0,0.55);
+      --navy:        #C8DDEF;
+      --blue:        #4FB3E8;
+      --accent:      #52BFEF;
+      --accent-hi:   #7BD0FA;
+      --teal:        #22D3EE;
+      --green:       #34D399;
+      --text:        #DEE9F6;
+      --text-2:      #B0CEEA;
+      --muted:       #6E96B8;
+      --subtle:      #3B5A78;
+      --tag-bg:      rgba(56,191,255,0.08);
+      --tag-border:  rgba(56,191,255,0.18);
+      --tag-text:    #52BFEF;
+      --pill-bg:     rgba(56,191,255,0.07);
+      --pill-border: rgba(56,191,255,0.13);
+      --pill-text:   #7BD0FA;
+      --stat-bg:     rgba(56,191,255,0.05);
+      --badge-bg:    rgba(52,211,153,0.09);
+      --badge-bdr:   rgba(52,211,153,0.20);
+      --badge-text:  #34D399;
+      --toggle-bg:   #1A3550;
+      --toggle-knob: #52BFEF;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       RESET & BASE
+    ──────────────────────────────────────────────────────────────── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background .35s, color .35s;
+    }
+
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius:3px; }
+
+    a { color:inherit; text-decoration:none; }
+    .container { max-width:1100px; margin:0 auto; padding:0 36px; }
+    .mono { font-family:'Fira Code', monospace; }
+
+    /* subtle dot grid */
+    body::before {
+      content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size:52px 52px; opacity:.5;
+      transition: opacity .35s;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       THEME TOGGLE
+    ──────────────────────────────────────────────────────────────── */
+    #theme-toggle {
+      position:relative; width:52px; height:27px;
+      background:var(--toggle-bg); border-radius:14px; border:none;
+      cursor:pointer; flex-shrink:0; transition:background .3s;
+    }
+    #theme-toggle::after {
+      content:''; position:absolute; top:3px; left:3px;
+      width:21px; height:21px; border-radius:50%;
+      background:var(--toggle-knob); transition:transform .3s, background .3s;
+    }
+    [data-theme="dark"] #theme-toggle::after { transform:translateX(25px); }
+    .t-icon { position:absolute; top:50%; transform:translateY(-50%); font-size:.7rem; pointer-events:none; line-height:1; }
+    .t-icon.sun { right:7px; } .t-icon.moon { left:7px; }
+
+    /* ────────────────────────────────────────────────────────────────
+       NAV
+    ──────────────────────────────────────────────────────────────── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:100;
+      padding:15px 0;
+      background:var(--bg-nav);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+      transition:background .35s, border-color .35s;
+    }
+    .nav-inner {
+      display:flex; align-items:center; justify-content:space-between;
+      max-width:1100px; margin:0 auto; padding:0 36px; gap:20px;
+    }
+    .nav-logo {
+      font-family:'Playfair Display', serif;
+      font-weight:700; font-size:1.15rem; color:var(--accent); flex-shrink:0;
+    }
+    .nav-logo small { font-family:'Nunito Sans', sans-serif; font-size:.78rem; color:var(--muted); font-weight:400; }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a {
+      font-size:.8rem; font-weight:600; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--muted); transition:color .2s;
+    }
+    .nav-links a:hover { color:var(--accent); }
+    .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
+    .btn-hire {
+      padding:9px 20px; background:var(--accent); color:#fff !important;
+      border-radius:8px; font-size:.78rem !important; font-weight:700 !important;
+      letter-spacing:.05em; text-transform:uppercase !important;
+      transition:background .2s, transform .15s !important;
+    }
+    .btn-hire:hover { background:var(--accent-hi); transform:translateY(-1px); }
+
+    /* ────────────────────────────────────────────────────────────────
+       HERO
+    ──────────────────────────────────────────────────────────────── */
+    #hero {
+      position:relative; z-index:1;
+      min-height:100vh; display:flex; align-items:center;
+      padding:130px 0 90px;
+    }
+    .hero-grid {
+      display:grid; grid-template-columns:1fr 360px;
+      gap:60px; align-items:center;
+    }
+
+    .avail-badge {
+      display:inline-flex; align-items:center; gap:9px;
+      padding:7px 18px;
+      background:var(--badge-bg); border:1px solid var(--badge-bdr);
+      border-radius:100px;
+      font-family:'Fira Code', monospace;
+      font-size:.72rem; color:var(--badge-text); margin-bottom:28px;
+    }
+    .avail-badge .dot {
+      width:7px; height:7px; background:var(--green); border-radius:50%;
+      animation:blink 2.2s ease-in-out infinite; flex-shrink:0;
+    }
+    @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.75)} }
+
+    .hero-name {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(2.5rem,5vw,3.9rem);
+      font-weight:800; line-height:1.08; letter-spacing:-.02em;
+      color:var(--text); margin-bottom:10px;
+    }
+    .hero-name .hl { color:var(--accent); font-style:italic; }
+
+    .hero-role {
+      font-family:'Fira Code', monospace; font-size:.9rem;
+      color:var(--muted); margin-bottom:24px;
+    }
+    .hero-role .c { color:var(--accent); }
+
+    .hero-desc {
+      font-size:1rem; color:var(--muted);
+      max-width:540px; line-height:1.85; margin-bottom:38px;
+    }
+    .hero-desc strong { color:var(--text); font-weight:600; }
+
+    .hero-actions { display:flex; gap:13px; flex-wrap:wrap; }
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:10px;
+      padding:13px 28px; background:var(--accent); color:#fff;
+      font-weight:700; border-radius:10px; font-size:.9rem;
+      box-shadow:0 4px 18px rgba(22,104,160,0.28);
+      transition:background .2s, transform .2s, box-shadow .2s;
+    }
+    .btn-primary:hover { background:var(--accent-hi); transform:translateY(-2px); box-shadow:0 8px 28px rgba(22,104,160,0.38); }
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 24px; border:1.5px solid var(--border-hi);
+      color:var(--text); border-radius:10px; font-size:.9rem; font-weight:600;
+      transition:border-color .2s, color .2s, background .2s;
+    }
+    .btn-ghost:hover { border-color:var(--accent); color:var(--accent); background:var(--tag-bg); }
+
+    /* side card */
+    .hero-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:20px; box-shadow:var(--shadow-lg); overflow:hidden;
+      transition:background .35s, border-color .35s;
+    }
+    .hc-top {
+      background:linear-gradient(135deg, var(--accent) 0%, var(--teal) 100%);
+      padding:26px 28px;
+    }
+    .hc-avatar {
+      width:60px; height:60px; border-radius:50%;
+      background:rgba(255,255,255,0.2);
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Playfair Display', serif;
+      font-size:1.45rem; font-weight:700; color:#fff; margin-bottom:14px;
+    }
+    .hc-top h3 { font-family:'Playfair Display', serif; font-size:1rem; color:#fff; font-weight:700; margin-bottom:2px; }
+    .hc-top p  { font-size:.78rem; color:rgba(255,255,255,.72); font-style:italic; }
+    .hc-body { padding:22px 24px; }
+    .hero-stats { display:grid; grid-template-columns:1fr 1fr; gap:11px; margin-bottom:18px; }
+    .stat {
+      background:var(--stat-bg); border:1px solid var(--border);
+      border-radius:10px; padding:13px; transition:background .35s;
+    }
+    .stat-n { font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:800; color:var(--accent); }
+    .stat-l { font-size:.7rem; color:var(--muted); margin-top:2px; font-weight:500; }
+    .hero-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .tag {
+      padding:4px 11px; background:var(--tag-bg); border:1px solid var(--tag-border);
+      border-radius:100px; font-size:.7rem; color:var(--tag-text);
+      font-family:'Fira Code', monospace; transition:background .35s;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       SECTION COMMONS
+    ──────────────────────────────────────────────────────────────── */
+    section { position:relative; z-index:1; padding:96px 0; }
+    .sep { border-top:1px solid var(--border); }
+
+    .eyebrow {
+      font-family:'Fira Code', monospace; font-size:.7rem; color:var(--accent);
+      letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px; display:block;
+    }
+    .sec-title {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(1.75rem,3vw,2.55rem);
+      font-weight:800; color:var(--text);
+      line-height:1.1; letter-spacing:-.02em; margin-bottom:12px;
+    }
+    .sec-title .hl { color:var(--accent); font-style:italic; }
+    .sec-sub { font-size:.96rem; color:var(--muted); max-width:550px; line-height:1.75; }
+    .divider {
+      width:42px; height:3px;
+      background:linear-gradient(90deg, var(--accent), var(--teal));
+      border-radius:2px; margin:16px 0 24px;
+    }
+    .sec-head { margin-bottom:52px; }
+
+    /* ────────────────────────────────────────────────────────────────
+       ABOUT
+    ──────────────────────────────────────────────────────────────── */
+    .about-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:60px; align-items:start; }
+    .about-text p { font-size:.97rem; color:var(--muted); line-height:1.85; margin-bottom:16px; }
+    .about-text p strong { color:var(--text); font-weight:600; }
+
+    .info-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
+      transition:background .35s, border-color .35s;
+    }
+    .ic-head {
+      background:linear-gradient(135deg, var(--accent), var(--teal));
+      padding:18px 22px;
+    }
+    .ic-head h3 { font-family:'Playfair Display', serif; font-size:.9rem; color:#fff; font-weight:700; }
+    .info-list { list-style:none; }
+    .info-list li {
+      display:flex; align-items:flex-start; gap:13px;
+      padding:13px 22px; border-bottom:1px solid var(--border);
+      font-size:.86rem; transition:background .2s;
+    }
+    .info-list li:last-child { border-bottom:none; }
+    .info-list li:hover { background:var(--stat-bg); }
+    .il-lbl { font-family:'Fira Code', monospace; font-size:.66rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; min-width:74px; flex-shrink:0; margin-top:2px; }
+    .il-val { color:var(--text); font-weight:500; word-break:break-word; }
+    .il-val a { color:var(--accent); }
+    .il-val a:hover { text-decoration:underline; }
+
+    /* ────────────────────────────────────────────────────────────────
+       SKILLS
+    ──────────────────────────────────────────────────────────────── */
+    .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .skill-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:14px; padding:24px;
+      transition:border-color .25s, transform .25s, box-shadow .25s, background .35s;
+    }
+    .skill-card:hover { border-color:var(--border-hi); transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+    .sk-icon { font-size:1.45rem; margin-bottom:11px; display:block; }
+    .skill-card h3 { font-family:'Playfair Display', serif; font-size:.9rem; font-weight:700; color:var(--text); margin-bottom:13px; }
+    .pill-wrap { display:flex; flex-wrap:wrap; gap:6px; }
+    .pill {
+      padding:3px 9px; background:var(--pill-bg); border:1px solid var(--pill-border);
+      border-radius:5px; font-size:.68rem; color:var(--pill-text);
+      font-family:'Fira Code', monospace; transition:background .35s;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       EXPERIENCE
+    ──────────────────────────────────────────────────────────────── */
+    .timeline { position:relative; }
+    .timeline::before {
+      content:''; position:absolute; left:18px; top:8px; bottom:0;
+      width:1px; background:linear-gradient(to bottom, var(--accent), transparent); opacity:.4;
+    }
+    .exp-item { padding:0 0 50px 58px; position:relative; }
+    .exp-dot {
+      position:absolute; left:8px; top:4px; width:22px; height:22px;
+      border-radius:50%; background:var(--bg-card); border:2px solid var(--accent);
+      display:flex; align-items:center; justify-content:center; transition:background .35s;
+    }
+    .exp-dot::after { content:''; width:9px; height:9px; background:var(--accent); border-radius:50%; }
+    .exp-head { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:4px; }
+    .exp-co { font-family:'Playfair Display', serif; font-size:1.18rem; font-weight:700; color:var(--text); }
+    .exp-period {
+      font-family:'Fira Code', monospace; font-size:.72rem; color:var(--accent);
+      padding:4px 12px; background:var(--tag-bg); border:1px solid var(--tag-border); border-radius:100px;
+    }
+    .exp-role { font-size:.86rem; color:var(--accent); font-style:italic; margin-bottom:4px; }
+    .exp-ctx { font-family:'Fira Code', monospace; font-size:.74rem; color:var(--subtle); margin-bottom:20px; }
+    .exp-group { margin-bottom:16px; }
+    .eg-label { font-size:.68rem; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:.1em; font-family:'Fira Code', monospace; margin-bottom:8px; }
+    .exp-list { list-style:none; display:flex; flex-direction:column; gap:7px; }
+    .exp-list li { display:flex; gap:10px; font-size:.87rem; color:var(--muted); line-height:1.68; }
+    .exp-list li::before { content:'▸'; color:var(--accent); flex-shrink:0; margin-top:1px; }
+    .exp-stack { display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; }
+    .exp-stack span {
+      padding:3px 9px; background:var(--stat-bg); border:1px solid var(--border);
+      border-radius:5px; font-size:.68rem; color:var(--muted); font-family:'Fira Code', monospace;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       PROJECT
+    ──────────────────────────────────────────────────────────────── */
+    .project-card {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:18px; padding:32px;
+      display:flex; flex-direction:column;
+      position:relative; overflow:hidden; box-shadow:var(--shadow);
+      transition:border-color .25s, transform .25s, box-shadow .25s, background .35s;
+    }
+    .project-card::after {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background:linear-gradient(90deg, var(--accent), var(--teal)); border-radius:18px 18px 0 0;
+    }
+    .project-card:hover { border-color:var(--border-hi); transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .proj-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; }
+    .proj-icon { font-size:1.8rem; }
+    .proj-links { display:flex; gap:8px; }
+    .proj-link {
+      display:flex; align-items:center; justify-content:center;
+      width:35px; height:35px; border:1px solid var(--border); border-radius:8px;
+      color:var(--muted); transition:border-color .2s, color .2s, background .2s;
+    }
+    .proj-link:hover { border-color:var(--accent); color:var(--accent); background:var(--tag-bg); }
+    .proj-link svg { width:16px; height:16px; }
+    .proj-title { font-family:'Playfair Display', serif; font-size:1.22rem; font-weight:700; color:var(--text); margin-bottom:5px; }
+    .proj-sub { font-family:'Fira Code', monospace; font-size:.72rem; color:var(--accent); margin-bottom:13px; }
+    .proj-desc { font-size:.88rem; color:var(--muted); line-height:1.75; margin-bottom:18px; flex:1; }
+    .proj-hi { list-style:none; margin-bottom:20px; display:flex; flex-direction:column; gap:7px; }
+    .proj-hi li { display:flex; gap:9px; font-size:.85rem; color:var(--muted); line-height:1.65; }
+    .proj-hi li::before { content:'▸'; color:var(--green); flex-shrink:0; }
+    .proj-stack { display:flex; flex-wrap:wrap; gap:6px; }
+    .proj-stack span {
+      padding:3px 9px; background:var(--pill-bg); border:1px solid var(--pill-border);
+      border-radius:5px; font-size:.68rem; color:var(--pill-text); font-family:'Fira Code', monospace;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       CONTACT
+    ──────────────────────────────────────────────────────────────── */
+    .contact-wrap {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:22px; padding:64px;
+      text-align:center; position:relative; overflow:hidden;
+      box-shadow:var(--shadow-lg); transition:background .35s, border-color .35s;
+    }
+    .contact-wrap::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:4px;
+      background:linear-gradient(90deg, var(--accent), var(--teal), var(--green));
+    }
+    .contact-wrap .sec-title { margin-bottom:10px; }
+    .contact-wrap p { color:var(--muted); max-width:510px; margin:0 auto 40px; line-height:1.8; font-size:.96rem; }
+    .c-links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-bottom:32px; }
+    .c-link {
+      display:inline-flex; align-items:center; gap:9px;
+      padding:12px 24px; border:1.5px solid var(--border-hi); border-radius:11px;
+      color:var(--text); font-size:.86rem; font-weight:600;
+      transition:border-color .2s, color .2s, background .2s;
+    }
+    .c-link:hover { border-color:var(--accent); color:var(--accent); background:var(--tag-bg); }
+    .c-link svg { width:17px; height:17px; }
+    .tz-note { font-family:'Fira Code', monospace; font-size:.72rem; color:var(--subtle); }
+    .tz-note strong { color:var(--green); }
+
+    /* ────────────────────────────────────────────────────────────────
+       FOOTER
+    ──────────────────────────────────────────────────────────────── */
+    footer {
+      position:relative; z-index:1; border-top:1px solid var(--border);
+      padding:26px 0; text-align:center;
+      font-size:.74rem; color:var(--subtle); font-family:'Fira Code', monospace;
+      transition:border-color .35s;
+    }
+
+    /* ────────────────────────────────────────────────────────────────
+       SCROLL REVEAL
+    ──────────────────────────────────────────────────────────────── */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity:1; transform:translateY(0); }
+
+    /* ────────────────────────────────────────────────────────────────
+       RESPONSIVE
+    ──────────────────────────────────────────────────────────────── */
+    @media(max-width:920px) {
+      .hero-grid { grid-template-columns:1fr; }
+      .hero-card { display:none; }
+      .about-grid { grid-template-columns:1fr; gap:40px; }
+      .skills-grid { grid-template-columns:repeat(2,1fr); }
+      .nav-links { display:none; }
+      .contact-wrap { padding:48px 24px; }
+    }
+    @media(max-width:600px) {
+      .container { padding:0 20px; }
+      .skills-grid { grid-template-columns:1fr; }
+      section { padding:68px 0; }
+      .hero-name { font-size:2.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">Ibrahim Khan <small>/ Full Stack Dev</small></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <span class="t-icon sun">☀️</span>
+          <span class="t-icon moon">🌙</span>
+        </button>
+        <a href="#contact" class="btn-hire nav-links">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="avail-badge"><span class="dot"></span><span id="hbadge"></span></div>
+          <h1 class="hero-name" id="hname"></h1>
+          <div class="hero-role mono" id="hrole"></div>
+          <p class="hero-desc" id="hdesc"></p>
+          <div class="hero-actions" id="hactions"></div>
+        </div>
+        <div class="hero-card reveal" id="hcard"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sep">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="eyebrow">// about me</span>
+          <h2 class="sec-title">Building systems that<br><span class="hl">scale globally</span></h2>
+          <div class="divider"></div>
+          <div class="about-text">
+            <p>I'm a Senior Full Stack Developer with <strong>6+ years of experience</strong> shipping enterprise-grade products across fintech and e-commerce. My core strength is end-to-end ownership — from architecture and API design through to deployment and documentation.</p>
+            <p>Currently I engineer <strong>financial waterfall distribution platforms</strong> at Citco Group Services, one of the world's largest alternative asset servicers. Before that, I built three independent SaaS products spanning hosting automation, grocery delivery, and food-tech.</p>
+            <p>I'm <strong>fully remote-ready</strong> — I communicate asynchronously, write detailed documentation, and thrive in globally distributed teams. Actively seeking remote roles with teams in EU, US, UK, Middle East, or APAC.</p>
+          </div>
+        </div>
+        <div class="reveal" id="about-info"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="sep">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow">// expertise</span>
+        <h2 class="sec-title">Technical <span class="hl">Skills</span></h2>
+        <div class="divider"></div>
+        <p class="sec-sub">Full-stack from pixel to infrastructure — specialising in financial systems and cloud-native APIs.</p>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="sep">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow">// career</span>
+        <h2 class="sec-title">Work <span class="hl">Experience</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="sep">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow">// portfolio</span>
+        <h2 class="sec-title">Personal <span class="hl">Projects</span></h2>
+        <div class="divider"></div>
+        <p class="sec-sub">Side projects demonstrating autonomous delivery, product thinking, and full-stack breadth.</p>
+      </div>
+      <div id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sep">
+    <div class="container">
+      <div class="contact-wrap reveal" id="cwrap"></div>
+    </div>
+  </section>
+
+  <footer><div class="container" id="ft"></div></footer>
+
+  <!-- SCRIPT -->
+  <script>
+  const IC = {
+    github:   `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`,
+    linkedin: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+    mail:     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>`,
+    ext:      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+    dl:       `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
+  };
+
+  const SKILLS_DATA = [
+    { icon:"⚛️", label:"Frontend",       pills:["React.js","TypeScript","JavaScript","HTML5","CSS3"] },
+    { icon:"🟢", label:"Backend",         pills:["Node.js","Express.js","REST APIs","Microservices","Serverless"] },
+    { icon:"☁️", label:"Cloud & DevOps",  pills:["AWS S3","DynamoDB","EC2","Lambda","IAM","CloudFormation","CI/CD"] },
+    { icon:"🗄️", label:"Databases",       pills:["MongoDB","MySQL","DynamoDB"] },
+    { icon:"🔌", label:"APIs & Tools",    pills:["Swagger/OpenAPI","Investran API","Git","Postman","JWT"] },
+    { icon:"🌐", label:"Remote Workflow", pills:["Slack","Jira","Confluence","GitHub","Async Comms","Agile/Scrum"] },
+  ];
+
+  const EXP_DATA = [
+    {
+      company:"Citco Group Services",
+      role:"Senior Full Stack Developer — Waterfall Platform",
+      period:"Sep 2024 – Present",
+      ctx:"Global alternative investment fund servicer · React · TypeScript · Node.js · AWS",
+      groups:[
+        { label:"Platform Engineering", items:[
+          "Engineered production features for an enterprise financial waterfall distribution platform serving global fund managers, enabling complex multi-tier profit allocation workflows.",
+          "Delivered full-stack solutions (React + TypeScript + Node.js) for new client onboarding, reducing configuration lead time through reusable workflow components.",
+          "Led backend modernisation migrating legacy Node.js routes to strictly-typed TypeScript, improving maintainability and new-engineer onboarding speed.",
+          "Built and documented production RESTful APIs with Swagger / OpenAPI, adopted as the integration standard across cross-functional teams.",
+          "Integrated AWS DynamoDB and S3 for high-availability data storage and audit-trail support aligned with financial compliance requirements.",
+          "Collaborated with Investran API teams to integrate third-party financial data feeds ensuring data consistency across client-specific calculation pipelines.",
+          "Drove API performance optimisation efforts, improving response throughput for large-scale financial datasets and high-concurrency query patterns.",
+        ]},
+        { label:"Architecture & Cross-functional Impact", items:[
+          "Co-designed a scalable stateless REST architecture for the waterfall calculation engine, including DynamoDB data modelling optimised for financial reporting access patterns.",
+          "Built modular, reusable React component libraries for client-specific financial workflows, significantly reducing duplication across teams.",
+          "Led knowledge-transfer documentation initiatives, cutting new-hire ramp-up time and reducing key-person dependencies.",
+          "Partnered with Product, QA, and Backend teams across time zones to deliver client-specific enhancements within sprint cycles.",
+        ]},
+      ],
+      tech:["React","TypeScript","Node.js","DynamoDB","S3","Swagger","REST APIs","Investran API"],
+    },
+    {
+      company:"Nextcrack Technologies Pvt Ltd",
+      role:"Full Stack Developer",
+      period:"Jan 2020 – Sep 2024",
+      ctx:"3 product verticals — hosting automation, grocery delivery, food delivery",
+      groups:[
+        { label:"Hostbricks — Hosting Automation", items:[
+          "Integrated WHMCS billing with WordPress for end-to-end hosting automation and self-service client provisioning.",
+          "Managed and scaled AWS infrastructure (EC2, Route53, Lightsail) supporting multi-tenant hosting operations.",
+          "Automated deployment pipelines with AWS CloudFormation, achieving repeatable zero-downtime provisioning.",
+        ]},
+        { label:"Grocelly — E-commerce Grocery Platform", items:[
+          "Built a cross-platform grocery delivery application (WooCommerce + Ionic) serving a multi-city customer base.",
+          "Developed event-driven microservices on AWS Lambda and API Gateway enabling serverless auto-scaling backend processing.",
+          "Implemented a multi-channel notification engine (Email/SES, SMS/SNS, Push) improving delivery-status communication.",
+        ]},
+        { label:"Foodlly — Food Delivery Application", items:[
+          "Developed a full-stack food delivery platform (React + Node.js) from zero to production, including real-time order tracking.",
+          "Integrated Razorpay and Stripe payment gateways with webhook-based reconciliation.",
+          "Architected and deployed a CDN-backed auto-scaling AWS infrastructure (CloudFront + S3 + EC2).",
+        ]},
+      ],
+      tech:["React","Node.js","WooCommerce","Ionic","Lambda","API Gateway","SES","SNS","CloudFront","Razorpay","Stripe"],
+    },
+  ];
+
+  const PROJECTS_DATA = [
+    {
+      icon:"🎓",
+      title:"Pioneer Academy Platform",
+      sub:"Full Stack · Educational SaaS",
+      desc:"An end-to-end educational platform built independently, applying enterprise-grade patterns — RBAC, JWT auth, CI/CD, modular API design — to a real-world SaaS product. Demonstrates autonomous delivery across design, development, and deployment: a key signal for global remote roles.",
+      highlights:[
+        "Architected a scalable content management system supporting course creation, student enrolment, and progress tracking.",
+        "Implemented role-based access control (RBAC) with JWT authentication for educator and student personas.",
+        "Deployed on AWS with a CI/CD pipeline — full ownership from architecture to production.",
+        "Custom REST API backend with modular service layer designed for future mobile expansion.",
+      ],
+      stack:["React","TypeScript","Node.js","MongoDB","AWS","REST API","JWT","CI/CD"],
+    },
+  ];
+
+  // ── RENDER ─────────────────────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Theme toggle
+    const tgl = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('ik-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    tgl.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('ik-theme', next);
+    });
+
+    // Hero
+    document.getElementById('hbadge').textContent = CONFIG.available;
+    const np = CONFIG.shortName.split(' ');
+    const nl = np.pop();
+    document.getElementById('hname').innerHTML = `${np.join(' ')}<br><span class="hl">${nl}</span>`;
+    document.getElementById('hrole').innerHTML = `<span class="c">&gt;</span> ${CONFIG.title}`;
+    document.getElementById('hdesc').innerHTML = `<strong>6+ years</strong> building enterprise fintech &amp; e-commerce platforms. Expert in <strong>React, TypeScript, Node.js &amp; AWS</strong>. Currently at Citco Group Services — seeking <strong>senior remote roles</strong> with global teams.`;
+    document.getElementById('hactions').innerHTML = `
+      <a href="#contact" class="btn-primary">${IC.mail} Get In Touch</a>
+      <a href="${CONFIG.resumePDF}" class="btn-ghost" download>${IC.dl} Download CV</a>`;
+    document.getElementById('hcard').innerHTML = `
+      <div class="hc-top">
+        <div class="hc-avatar">IK</div>
+        <h3>${CONFIG.shortName}</h3>
+        <p>${CONFIG.title}</p>
+      </div>
+      <div class="hc-body">
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years Experience</div></div>
+          <div class="stat"><div class="stat-n">3</div><div class="stat-l">Products Shipped</div></div>
+          <div class="stat"><div class="stat-n">AWS</div><div class="stat-l">Cloud Infra</div></div>
+          <div class="stat"><div class="stat-n">UTC+5:30</div><div class="stat-l">IST Timezone</div></div>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">Fintech</span>
+          <span class="tag">Remote-Ready</span>
+          <span class="tag">MERN Stack</span>
+          <span class="tag">AWS</span>
+        </div>
+      </div>`;
+
+    // About info card
+    document.getElementById('about-info').innerHTML = `
+      <div class="info-card">
+        <div class="ic-head"><h3>Quick Info</h3></div>
+        <ul class="info-list">
+          <li><span class="il-lbl">Email</span><span class="il-val">${CONFIG.email}</span></li>
+          <li><span class="il-lbl">Phone</span><span class="il-val">${CONFIG.phone}</span></li>
+          <li><span class="il-lbl">Location</span><span class="il-val">${CONFIG.location}</span></li>
+          <li><span class="il-lbl">GitHub</span><span class="il-val"><a href="${CONFIG.github}" target="_blank" rel="noopener">${CONFIG.github.replace('https://','')}</a></span></li>
+          <li><span class="il-lbl">LinkedIn</span><span class="il-val"><a href="${CONFIG.linkedin}" target="_blank" rel="noopener">linkedin.com/in/mahammad-ibrahim-khan</a></span></li>
+          <li><span class="il-lbl">Project</span><span class="il-val"><a href="${CONFIG.pioneerSite}" target="_blank" rel="noopener">pioneer-academy-platform.vercel.app</a></span></li>
+          <li><span class="il-lbl">Status</span><span class="il-val">🟢 Available for Remote Roles</span></li>
+        </ul>
+      </div>`;
+
+    // Skills
+    const sg = document.getElementById('skills-grid');
+    SKILLS_DATA.forEach((s, i) => {
+      const c = document.createElement('div');
+      c.className = 'skill-card reveal';
+      c.style.transitionDelay = `${i * 55}ms`;
+      c.innerHTML = `<span class="sk-icon">${s.icon}</span><h3>${s.label}</h3><div class="pill-wrap">${s.pills.map(p=>`<span class="pill">${p}</span>`).join('')}</div>`;
+      sg.appendChild(c);
+    });
+
+    // Experience
+    const tl = document.getElementById('timeline');
+    EXP_DATA.forEach(exp => {
+      const el = document.createElement('div');
+      el.className = 'exp-item reveal';
+      el.innerHTML = `
+        <div class="exp-dot"></div>
+        <div class="exp-head">
+          <div class="exp-co">${exp.company}</div>
+          <div class="exp-period">${exp.period}</div>
+        </div>
+        <div class="exp-role">${exp.role}</div>
+        <div class="exp-ctx mono">${exp.ctx}</div>
+        <div>${exp.groups.map(g=>`
+          <div class="exp-group">
+            <div class="eg-label">${g.label}</div>
+            <ul class="exp-list">${g.items.map(b=>`<li>${b}</li>`).join('')}</ul>
+          </div>`).join('')}</div>
+        <div class="exp-stack">${exp.tech.map(t=>`<span>${t}</span>`).join('')}</div>`;
+      tl.appendChild(el);
+    });
+
+    // Projects
+    const pg = document.getElementById('projects-grid');
+    PROJECTS_DATA.forEach(p => {
+      const c = document.createElement('div');
+      c.className = 'project-card reveal';
+      c.innerHTML = `
+        <div class="proj-top">
+          <div class="proj-icon">${p.icon}</div>
+          <div class="proj-links">
+            <a href="${CONFIG.github}/pioneer-academy-platform" target="_blank" rel="noopener" class="proj-link" title="GitHub">${IC.github}</a>
+            <a href="${CONFIG.pioneerSite}" target="_blank" rel="noopener" class="proj-link" title="Live Site">${IC.ext}</a>
+          </div>
+        </div>
+        <div class="proj-title">${p.title}</div>
+        <div class="proj-sub mono">${p.sub}</div>
+        <p class="proj-desc">${p.desc}</p>
+        <ul class="proj-hi">${p.highlights.map(h=>`<li>${h}</li>`).join('')}</ul>
+        <div class="proj-stack">${p.stack.map(s=>`<span>${s}</span>`).join('')}</div>`;
+      pg.appendChild(c);
+    });
+
+    // Contact
+    document.getElementById('cwrap').innerHTML = `
+      <span class="eyebrow">// let's build something</span>
+      <h2 class="sec-title">Open to <span class="hl">Remote Opportunities</span></h2>
+      <p>Actively seeking full-time remote roles with global teams in fintech, SaaS, or product companies. I'm reliable, async-first, and love shipping things that scale. Let's talk.</p>
+      <div class="c-links">
+        <a href="mailto:${CONFIG.email}" class="c-link">${IC.mail} ${CONFIG.email}</a>
+        <a href="${CONFIG.linkedin}" target="_blank" rel="noopener" class="c-link">${IC.linkedin} LinkedIn</a>
+        <a href="${CONFIG.github}" target="_blank" rel="noopener" class="c-link">${IC.github} GitHub</a>
+        <a href="${CONFIG.pioneerSite}" target="_blank" rel="noopener" class="c-link">${IC.ext} Pioneer Academy</a>
+      </div>
+      <div class="tz-note">Timezone: <strong>IST (UTC+5:30)</strong> &nbsp;·&nbsp; Overlaps with UK mornings &amp; US East afternoons &nbsp;·&nbsp; Flexible for standups across EU / APAC</div>`;
+
+    // Footer
+    document.getElementById('ft').textContent =
+      `© ${new Date().getFullYear()} ${CONFIG.name}  ·  Senior Full Stack Developer  ·  Available for Remote Roles`;
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  });
+  </script>
+</body>
+</html>
